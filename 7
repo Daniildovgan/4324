@@ -1,0 +1,42 @@
+#include <iostream>
+
+int main() {
+    int a, b;
+    std::cout << "Введіть дві межі діапазону: ";
+    std::cin >> a >> b;
+
+    int start = (a < b) ? a : b;
+    int end = (a < b) ? b : a;
+
+    std::cout << "Усі числа з діапазону від " << start << " до " << end << ":" << std::endl;
+    for (int i = start; i <= end; ++i) {
+        std::cout << i << " ";
+    }
+    std::cout << std::endl;
+
+    std::cout << "Усі парні числа з діапазону:" << std::endl;
+    for (int i = start; i <= end; ++i) {
+        if (i % 2 == 0) {
+            std::cout << i << " ";
+        }
+    }
+    std::cout << std::endl;
+
+    std::cout << "Усі непарні числа з діапазону:" << std::endl;
+    for (int i = start; i <= end; ++i) {
+        if (i % 2 != 0) {
+            std::cout << i << " ";
+        }
+    }
+    std::cout << std::endl;
+
+    std::cout << "Усі числа, кратні семи з діапазону:" << std::endl;
+    for (int i = start; i <= end; ++i) {
+        if (i % 7 == 0) {
+            std::cout << i << " ";
+        }
+    }
+    std::cout << std::endl;
+
+    return 0;
+}

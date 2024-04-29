@@ -1,0 +1,21 @@
+#include <iostream>
+
+int main() {
+    int a;
+    std::cout << "Введіть число a (1 <= a <= 20): ";
+    std::cin >> a;
+
+    if (a < 1 || a > 20) {
+        std::cout << "Число a повинно бути від 1 до 20." << std::endl;
+        return 1; 
+    }
+
+    long long product = 1;
+    for (int i = a; i <= 20; ++i) {
+        product *= i;
+    }
+
+    std::cout << "Добуток чисел від " << a << " до 20: " << product << std::endl;
+
+    return 0; 
+}

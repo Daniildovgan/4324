@@ -1,0 +1,19 @@
+#include <iostream>
+
+int main() {
+    int a, b;
+    std::cout << "Введіть дві межі діапазону: ";
+    std::cin >> a >> b;
+
+    int start = (a < b) ? a : b;
+    int end = (a < b) ? b : a;
+
+    int sum = 0;
+    for (int i = start; i <= end; ++i) {
+        sum += i;
+    }
+
+    std::cout << "Сума всіх чисел від " << start << " до " << end << " дорівнює: " << sum << std::endl;
+
+    return 0;
+}
